@@ -3,12 +3,10 @@ import { Schema, model } from "mongoose";
 
 
 const statementSchema = new Schema({
-     statementId:{type:String},
-     incidentType:{enum:['criminal', 'non-criminal']},
-     civilianStatus:{enum:['suspect', 'complaint' , 'witness']},
+     incidentType:{type:String, enum:['criminal', 'non-criminal']},
+     civilianStatus:{ type:String, enum:['suspect', 'complaint' , 'witness']},
      statement:{type:String},
-     caseStatus:{enum:['open','close']},
-    //  civilianId:{type:String},
+     caseStatus:{type:String, enum:['open','close']},
      createdAt:{type:Date, default:Date.now},
      updatedAt:{ type:Date, default:Date.now}
 
